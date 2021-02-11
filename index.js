@@ -21,7 +21,7 @@ app.use(express.json({
 }));
 
 // Puerto de la app
-const PORT = process.env.PORT || 4000;
+const port = process.env.PORT || 4000;
 
 // Definit la pagina principal
 
@@ -39,6 +39,6 @@ app.use('/api/tareas', require('./routes/tareas'));
 
 // arrancando el app
 
-app.listen(PORT, () => {
-    console.log(`El servidor esta funcionando en el puerto ${PORT}`);
+app.listen(port, '0.0.0.0', () => {
+    console.log(`El servidor esta funcionando en el puerto ${port}`);
 })
